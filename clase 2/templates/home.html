@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+</head>
+<body>
+    <h1>Estás en el Home</h1>
+    <h2>(Lista)Las peliculas destacadas son:</h2>
+    <ol>
+        <li>{{movies[0]}}</li>
+        <li>{{movies[1]}}</li>
+        <li>{{movies[2]}}</li>
+    </ol>
+
+    <h2>(Diccionario)La película mas vista es:</h2>
+    <p>Nombre: {{details["nombre"]}}</p>
+    <p>Año: {{details["año"]}}</p>
+    <p>Autor: {{details["autor"]}}</p>
+
+    <h2>(Clase)La película ganadora es:</h2>
+    <p>Nombre: {{ favorite.nombre }}</p>
+    <p>Año: {{ favorite.año }}</p>
+    <p>Autor: {{ favorite.autor }}</p>
+</body>
+</html>
