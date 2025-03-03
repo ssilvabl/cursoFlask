@@ -6,6 +6,33 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <h1>Condicionales</h1>
+    <h2>Comparaciones básicas</h2>
+
+    <!--Crear condicionales-->
+    {% if(pais == "Colombia") %}
+
+    <h2>Lista de países</h2>
+    <ol>
+        <li>Colombia</li>
+        <li>Venezuela</li>
+        <li>México</li>
+    </ol>
+
+    {% elif(pais == "Venezuela") %}
+
+    <h2>Lista de ciudades</h2>
+    <ol>
+        <li>Bogotá</li>
+        <li>Caracas</li>
+        <li>Ciudad de México</li>
+    </ol>
+
+    {% else %}
+    <h2>El país {{ pais }} no se encuentra registrado</h2>
+
+    <!--Finalizar condicional-->
+    {% endif %}
+
 </body>
 </html>
