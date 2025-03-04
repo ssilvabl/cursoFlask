@@ -18,8 +18,16 @@ def loop_for():
         "Ecuador"
     ]
 
+    # Diccionario de elementos a enviar a la plantilla
+    ciudades = {
+        "Bogotá" : 100,
+        "Pereira" : 200,
+        "Medellín" : 300,
+        "Valledupar" : 400
+    }
+
     # Retornar y renderizar la plantilla
-    return render_template("home.html")
+    return render_template("home.html", countries = paises, cities = ciudades)
 
 
 # Configurar las opciones para realizar la ejecución como fichero principal

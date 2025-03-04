@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle For</title>
+</head>
+<body>
+
+    <h1>Lista de Países</h1>
+    <h2>Estos países son hispanohablantes:</h2>
+
+    <ul>
+        <!--Utilizar bucles-->
+        {% for country in countries %}
+            <li>{{ country }}</li>
+        <!--Finalizar el for-->
+        {% endfor %}
+    </ul>
+
+    <h2>Lista de ciudades:</h2>
+    <ol>
+        <!--Recorriendo diccionarios con su clave y valor-->
+        {% for city, inhabitant in cities.items() %}
+        <li>La ciudad {{ city }} tiene {{ inhabitant }} habitantes</li>
+        {% endfor %}
+    </ol>
+    
+</body>
+</html>

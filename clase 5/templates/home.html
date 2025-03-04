@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <h1>Formulario</h1>
+    
+    <form method="post">
+        <label for="entry">Nombre completo</label>
+        <input type="text" name="contenido" id="">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Datos ingresados:</h2>
+    {% if(nombre) %}
+        <p>{{ nombre }}</p>
+    {% endif %}
+
+</body>
+</html>
