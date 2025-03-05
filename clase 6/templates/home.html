@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <h1>Formulario</h1>
+    
+    <form method="post">
+        <label for="entry">Nombre de usuario</label>
+        <input type="text" name="contenido" id="">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Usuarios registrados:</h2>
+    <!--Recorrer los usuarios registrados y obtener el valor del parámetro nombre-->
+    <ul>
+        {% for usuario in usuarios %}
+        <li>{{ usuario.nombre }}</li>
+        {%endfor%}
+    </ul>
+
+</body>
+</html>
