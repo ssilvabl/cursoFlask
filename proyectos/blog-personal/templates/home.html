@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantilla con Bootstrap 5</title>
+  <!-- Vinculando la última versión de Bootstrap 5 desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- Header con barra de navegación -->
+  <header class="bg-primary text-white py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Mi Sitio Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Página 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Página 2</a>
+            </li>
+          </ul>
+          <!-- Barra de búsqueda -->
+          <form class="d-flex ms-3">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main con el formulario -->
+  <main class="bg-light py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h2>Formulario de Ingreso</h2>
+      </div>
+      <form method="post">
+        <div class="mb-3">
+          <label for="titulo" class="form-label">Título</label>
+          <input type="text" class="form-control" name="title" id="titulo" placeholder="Ingresa un título">
+        </div>
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea class="form-control" name="description" id="descripcion" rows="4" placeholder="Escribe una descripción larga"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+
+      <!-- Sección de publicaciones -->
+      <div class="mt-5">
+        <h3>Publicaciones</h3>
+        <div class="list-group">
+          <!-- Publicación 1 -->
+          <a href="#" class="list-group-item list-group-item-action">
+            <h5 class="mb-1">Título de Publicación 1</h5>
+            <p class="mb-1">Descripción breve de la publicación 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <small>Publicado el 5 de marzo de 2025</small>
+          </a>
+
+          <!--Recorrer todas las entradas-->
+          {% for entrada in entradas %}
+          <!-- Publicación-->
+          <a href="#" class="list-group-item list-group-item-action">
+            <h5 class="mb-1">{{ entrada.titulo }}</h5>
+            <p class="mb-1">{{ entrada.descripcion }}</p>
+            <small>{{ entrada.fecha }}</small>
+          </a>
+          {%endfor%}
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer con créditos -->
+  <footer class="bg-dark text-white py-3">
+    <p class="text-center mb-0">&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
