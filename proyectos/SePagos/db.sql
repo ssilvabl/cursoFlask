@@ -28,5 +28,6 @@ CREATE TABLE payments (
     amount INT,
     installments INT,
     date_start DATE,
-    date_end DATE
+    date_end DATE,
+    category VARCHAR(20) NOT NULL
 );
